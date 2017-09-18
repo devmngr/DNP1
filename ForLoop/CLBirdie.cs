@@ -8,10 +8,6 @@ namespace ForLoop
 {
     class CLBirdie
     {
-        public CLBirdie()
-        {
-
-        }
         public string makeSomeNoise()
         {
             string temp = "Peep";
