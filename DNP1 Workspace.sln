@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{9DB01291-A697-4AF7-85DB-C125591788A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLoop", "ForLoop\ForLoop.csproj", "{AA670808-8E0A-4561-9127-F05DF76FDCCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DB01291-A697-4AF7-85DB-C125591788A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB01291-A697-4AF7-85DB-C125591788A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB01291-A697-4AF7-85DB-C125591788A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB01291-A697-4AF7-85DB-C125591788A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA670808-8E0A-4561-9127-F05DF76FDCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA670808-8E0A-4561-9127-F05DF76FDCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA670808-8E0A-4561-9127-F05DF76FDCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA670808-8E0A-4561-9127-F05DF76FDCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1A1253B-3CC3-4063-9405-257CC4EB7739}
+	EndGlobalSection
+EndGlobal
