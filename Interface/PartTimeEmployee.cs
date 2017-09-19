@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inerface
+namespace Interface
 {
-    class PartTimeEmployee: Employee
+    class PartTimeEmployee:Employee
     {
-
         private double hourlyWage;
         private int hoursPerMonth;
 
-        public PartTimeEmployee(string name, double hourlyWage, int hoursPerMonth) : base (name)
+        public PartTimeEmployee(string name, double hourlyWage, int hoursPerMonth) : base(name)
         {
             this.hourlyWage = hourlyWage;
             this.hoursPerMonth = hoursPerMonth;
@@ -22,11 +21,6 @@ namespace Inerface
         {
             return hourlyWage * hoursPerMonth;
         }
-
-
-
-
-
 
     }
 }

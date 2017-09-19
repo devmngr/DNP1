@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMathLib", "TestMathLib\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{40EAD85E-6D66-4D8F-841A-F633A46DB9C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{2705632B-6F5A-49DC-BA0F-FED6B19F1159}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{40EAD85E-6D66-4D8F-841A-F633A46DB9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EAD85E-6D66-4D8F-841A-F633A46DB9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EAD85E-6D66-4D8F-841A-F633A46DB9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

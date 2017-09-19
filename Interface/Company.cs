@@ -21,14 +21,12 @@ namespace Interface
 
             double total = 0;
 
-            foreach(Employee item in employs)
+            foreach (Employee item in employs)
             {
                 total += item.getMonthSalary();
             }
             return total;
         }
-
-
 
     }
 }

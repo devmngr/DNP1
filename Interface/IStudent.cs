@@ -8,9 +8,6 @@ namespace Interface
 {
     interface IStudent
     {
-
-
         void register(int year);
-
     }
 }

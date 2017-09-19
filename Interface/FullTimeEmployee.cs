@@ -9,7 +9,7 @@ namespace Interface
     class FullTimeEmployee : Employee
     {
         private double monthlySallary;
-        public FullTimeEmployee(string name,double monthlySallary) :base(name)
+        public FullTimeEmployee(string name, double monthlySallary) : base(name)
         {
             this.monthlySallary = monthlySallary;
         }

@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Interface
 {
-        public abstract class Employee
+    public abstract class Employee
+    {
+        public string name { get; }
+
+        public Employee(string name)
         {
-            public string name { get; }
-
-            public Employee(string name)
-            {
-                this.name = name;
-            }
-    
-            public abstract double getMonthSalary();
-
+            this.name = name;
         }
-    
+
+        public abstract double getMonthSalary();
+
+    }
 }
