@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{9DB01291-A697-4AF7-85DB-C125591788A8}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBusTaxes", "HouseBusTaxes\HouseBusTaxes.csproj", "{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections ex6", "Collections ex6\Collections ex6.csproj", "{7298CBDB-DA55-45C1-A02F-08704ACEEC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lists- Ex7", "Lists- Ex7\Lists- Ex7.csproj", "{6D788E0E-9301-4192-816E-5C646D82A732}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{7298CBDB-DA55-45C1-A02F-08704ACEEC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7298CBDB-DA55-45C1-A02F-08704ACEEC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7298CBDB-DA55-45C1-A02F-08704ACEEC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D788E0E-9301-4192-816E-5C646D82A732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D788E0E-9301-4192-816E-5C646D82A732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D788E0E-9301-4192-816E-5C646D82A732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D788E0E-9301-4192-816E-5C646D82A732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
