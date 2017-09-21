@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{2705632B-6F5A-49DC-BA0F-FED6B19F1159}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseBusTaxes", "HouseBusTaxes\HouseBusTaxes.csproj", "{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2705632B-6F5A-49DC-BA0F-FED6B19F1159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0713DB-3687-49D6-8AEB-12DE5B8F25E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
