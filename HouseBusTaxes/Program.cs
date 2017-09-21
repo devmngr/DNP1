@@ -14,11 +14,8 @@ namespace HouseBusTaxes
             ITaxable busTax = new Bus(123,3500, 1000, 13);
             ITaxable housTax = new House("Arhus", true, 13, 8210);
 
-           // decimal a = busTax.TaxValue();
-
-           
             Console.WriteLine("{0:g}", busTax.TaxValue());
-            Console.WriteLine("{0:g}", housTax.TaxValue());s
+            Console.WriteLine("{0:g}", housTax.TaxValue());
 
         }
     }
