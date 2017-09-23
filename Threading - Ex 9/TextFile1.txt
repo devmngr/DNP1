@@ -1,0 +1,4 @@
+﻿
+TextFile 1
+Please notice the data read from the file is stored in a public string data. This is to make the assignment easier for you.
+Write a C# program, which uses the class above to compare two files. The files shall be read in separate threads running in parallel.
