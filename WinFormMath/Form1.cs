@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace WinFormMath
         private double a;
         private double b;
         private bool parsable = false;
-        private const string ADDITION = "+",SUBTRACTION ="-", MULTIPLICATION = "*", DIVISION = "/";
+        private const string ADDITION = "+", SUBTRACTION = "-", MULTIPLICATION = "*", DIVISION = "/";
 
         public Form1()
         {
@@ -50,12 +51,14 @@ namespace WinFormMath
         }
         private void save_list_btn_Click(object sender, EventArgs e)
         {
-            saveList();
+             //openSaveFileDialog();
+            
+            createXML();
         }
 
         private void read_list_btn_Click(object sender, EventArgs e)
         {
-
+            readList();
         }
 
 
@@ -82,15 +85,15 @@ namespace WinFormMath
         }
         private void calculate(string operation)
         {
-            double result =0;
+            double result = 0;
             convert_A_B();
             if (parsable)
             {
                 if (operation == ADDITION)
                 {
-                   result= lib.double_addition(a,b);
+                    result = lib.double_addition(a, b);
                 }
-               else if (operation == SUBTRACTION)
+                else if (operation == SUBTRACTION)
                 {
                     result = lib.double_subtraction(a, b);
 
@@ -105,7 +108,7 @@ namespace WinFormMath
                     result = lib.double_division(a, b);
 
                 }
-                addToListBox(operation,result);
+                addToListBox(operation, result);
             }
         }
         private void addToListBox(string operation, double result)
@@ -127,55 +130,59 @@ namespace WinFormMath
 
 
 
-        private void saveList()
+        private void createXML()
         {
-            openSaveFileDialog();
-           /* XmlDocument doc = new XmlDocument();
-            XmlElement el = (XmlElement)doc.AppendChild(doc.CreateElement("Foo"));
-            el.SetAttribute("Bar", "some & value");
-            el.AppendChild(doc.CreateElement("Nested")).InnerText = "data";
-            Console.WriteLine(doc.OuterXml);*/
+            List<Object> list = listBox1.Items.OfType<Object>().ToList();
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlNode rootNode = xmlDoc.CreateElement("mathematics");
+            xmlDoc.AppendChild(rootNode);
 
-
+            foreach (Object item in list)
+            {
+                XmlNode node = xmlDoc.CreateElement("operation");
+                // XmlAttribute attribute = xmlDoc.CreateAttribute("Addition");
+                //attribute.Value = "add";
+                // userNode.Attributes.Append(attribute);
+                node.InnerText = item.ToString();
+                rootNode.AppendChild(node);
+            }
+            xmlDoc.Save(@"D:\GitHub\DNP1\WinFormMath\operationsExecuted.xml");
         }
+
         private void openSaveFileDialog()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "XML XML|*.xml";
             saveFileDialog.Title = "Save an XML File";
             saveFileDialog.ShowDialog();
-            
+
             // If the file name is not an empty string open it for saving.  
-            if (saveFileDialog.FileName != "")
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Saves the Image via a FileStream created by the OpenFile method.  
-                System.IO.FileStream fs =
-                   (System.IO.FileStream)saveFileDialog.OpenFile();
+                using (Stream fs = File.Open(saveFileDialog.FileName, FileMode.CreateNew)) ;
+             
+                  createXML();
 
-
-
-                fs.Close();
+                 //fs.Close();
             }
         }
 
         private void readList()
         {
-            /*XmlTextReader reader;
-            //r = new XmlTextReader("C:\\Uddannelse\\DNP1\\XML\\addressbook.xml");
-            reader = new XmlTextReader("addressbook.xml");
-            while (r.Read())
+            XmlTextReader reader;
+            reader = new XmlTextReader(@"D:\GitHub\DNP1\WinFormMath\operationsExecuted.xml");
+            //reader = new XmlTextReader("addressbook.xml");
+            listBox1.Items.Clear();
+            while (reader.Read())
             {
-                if (r.IsStartElement("lastname"))
+                if (reader.IsStartElement("operation"))
                 {
-                    r.Read();	//  read the name
-                    Console.Write("{0}, ", r.Value);
+                    reader.Read();  //  read the name
+                                    // Console.Write("{0}, ", r.Value);
+                    listBox1.Items.Add(reader.Value);
                 }
             }
-            r.Close();
-            Console.WriteLine();
-
-    */
+            reader.Close();
         }
-
     }
 }

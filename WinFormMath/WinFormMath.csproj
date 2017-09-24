@@ -84,8 +84,5 @@
       <Name>MathLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="operationsExecuted.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
