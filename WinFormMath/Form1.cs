@@ -1,0 +1,181 @@
+﻿using DNP;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml;
+
+namespace WinFormMath
+{
+    public partial class Form1 : Form
+    {
+        private MathLib lib = new MathLib();
+        private double a;
+        private double b;
+        private bool parsable = false;
+        private const string ADDITION = "+",SUBTRACTION ="-", MULTIPLICATION = "*", DIVISION = "/";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            calculate(ADDITION);
+        }
+        private void sub_btn_Click(object sender, EventArgs e)
+        {
+            calculate(SUBTRACTION);
+        }
+        private void mul_btn_Click(object sender, EventArgs e)
+        {
+            calculate(MULTIPLICATION);
+        }
+        private void div_btn_Click(object sender, EventArgs e)
+        {
+            calculate(DIVISION);
+        }
+        private void clr_btn_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+        private void clear_list_btn_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+        private void save_list_btn_Click(object sender, EventArgs e)
+        {
+            saveList();
+        }
+
+        private void read_list_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void stress_test_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void convert_A_B()
+        {
+
+            double parsedValue;
+            if (!double.TryParse(first_number.Text, out parsedValue)
+                || !double.TryParse(second_number.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field");
+                return;
+            }
+            else
+            {
+                a = double.Parse(first_number.Text);
+                b = double.Parse(second_number.Text);
+                parsable = true;
+            }
+        }
+        private void calculate(string operation)
+        {
+            double result =0;
+            convert_A_B();
+            if (parsable)
+            {
+                if (operation == ADDITION)
+                {
+                   result= lib.double_addition(a,b);
+                }
+               else if (operation == SUBTRACTION)
+                {
+                    result = lib.double_subtraction(a, b);
+
+                }
+                else if (operation == MULTIPLICATION)
+                {
+                    result = lib.double_multiplication(a, b);
+
+                }
+                else if (operation == DIVISION)
+                {
+                    result = lib.double_division(a, b);
+
+                }
+                addToListBox(operation,result);
+            }
+        }
+        private void addToListBox(string operation, double result)
+        {
+            string item = a + " " + operation + " " + b + " = " + result;
+            listBox1.Items.Add(item);
+            reset();
+
+        }
+        private void reset()
+        {
+            first_number.Text = "";
+            second_number.Text = "";
+            parsable = false;
+
+        }
+
+
+
+
+
+        private void saveList()
+        {
+            openSaveFileDialog();
+           /* XmlDocument doc = new XmlDocument();
+            XmlElement el = (XmlElement)doc.AppendChild(doc.CreateElement("Foo"));
+            el.SetAttribute("Bar", "some & value");
+            el.AppendChild(doc.CreateElement("Nested")).InnerText = "data";
+            Console.WriteLine(doc.OuterXml);*/
+
+
+        }
+        private void openSaveFileDialog()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML XML|*.xml";
+            saveFileDialog.Title = "Save an XML File";
+            saveFileDialog.ShowDialog();
+            
+            // If the file name is not an empty string open it for saving.  
+            if (saveFileDialog.FileName != "")
+            {
+                // Saves the Image via a FileStream created by the OpenFile method.  
+                System.IO.FileStream fs =
+                   (System.IO.FileStream)saveFileDialog.OpenFile();
+
+
+
+                fs.Close();
+            }
+        }
+
+        private void readList()
+        {
+            /*XmlTextReader reader;
+            //r = new XmlTextReader("C:\\Uddannelse\\DNP1\\XML\\addressbook.xml");
+            reader = new XmlTextReader("addressbook.xml");
+            while (r.Read())
+            {
+                if (r.IsStartElement("lastname"))
+                {
+                    r.Read();	//  read the name
+                    Console.Write("{0}, ", r.Value);
+                }
+            }
+            r.Close();
+            Console.WriteLine();
+
+    */
+        }
+
+    }
+}
