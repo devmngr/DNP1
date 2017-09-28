@@ -39,10 +39,6 @@ namespace Threading___Ex_9
             else
                 Console.WriteLine("Thefiles are NOT EQUAL");
 
-
-
-
-
         }
     }
 }
